@@ -1,0 +1,2486 @@
+{
+  "id": 69923,
+  "name": "AI Image Genre",
+  "config": {
+    "id": null,
+    "nodes": [
+      {
+        "id": "start",
+        "data": {
+          "name": "Start Node",
+          "processor": "start",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "inputs": {
+              "prompt_Image": {
+                "type": "string",
+                "title": "image_prompt",
+                "x-order": 0
+              },
+              "CN_image_2": {
+                "type": "string",
+                "format": "uri",
+                "title": "CN Image 2",
+                "x-order": 6
+              },
+              "CN_image_1": {
+                "type": "string",
+                "format": "uri",
+                "title": "CN image 1",
+                "x-order": 4
+              },
+              "CN_image_3": {
+                "type": "string",
+                "title": "CN image 3",
+                "x-order": 8,
+                "format": "uri"
+              },
+              "CN_image_4": {
+                "type": "string",
+                "title": "CN image 4",
+                "x-order": 10,
+                "format": "uri"
+              },
+              "cn1_w": {
+                "type": "number",
+                "title": "cn1 weight",
+                "x-order": 5
+              },
+              "cn2_w": {
+                "type": "number",
+                "title": "cn2 weight",
+                "x-order": 7
+              },
+              "cn3_w": {
+                "type": "number",
+                "title": "cn3 weight",
+                "x-order": 9
+              },
+              "cn4_w": {
+                "type": "number",
+                "title": "cn4 weight",
+                "x-order": 11
+              },
+              "Face_Swap": {
+                "type": "boolean",
+                "title": "Face Swap",
+                "x-order": 1
+              },
+              "Upscale": {
+                "type": "boolean",
+                "title": "Upscale",
+                "x-order": 3
+              },
+              "Variance": {
+                "type": "boolean",
+                "title": "Variance",
+                "x-order": 2
+              }
+            },
+            "data": {
+              "prompt_Image": "image of boy in lamborgini with sunglasses",
+              "CN_image_1": null,
+              "CN_image_2": null,
+              "CN_image_3": null,
+              "CN_image_4": null,
+              "cn1_w": 1.6,
+              "cn2_w": 1.6,
+              "cn3_w": 1.6,
+              "cn4_w": 1.6,
+              "Face_Swap": true,
+              "Upscale": false,
+              "Variance": false
+            }
+          },
+          "settings_params": {
+            "prompt_Image": {
+              "parameter_type": null
+            },
+            "CN_image_1": {
+              "parameter_type": null
+            },
+            "cn1_w": {
+              "parameter_type": null
+            },
+            "CN_image_2": {
+              "parameter_type": null
+            },
+            "cn2_w": {
+              "parameter_type": null
+            },
+            "CN_image_3": {
+              "parameter_type": null
+            },
+            "cn3_w": {
+              "parameter_type": null
+            },
+            "CN_image_4": {
+              "parameter_type": null
+            },
+            "cn4_w": {
+              "parameter_type": null
+            },
+            "Face_Swap": {
+              "parameter_type": null
+            },
+            "Variance": {
+              "parameter_type": null
+            },
+            "Upscale": {
+              "parameter_type": null
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 390,
+          "y": 85
+        }
+      },
+      {
+        "id": "end",
+        "data": {
+          "name": "End Node",
+          "processor": "end",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "inputs": {
+              "Output": {
+                "type": "string",
+                "format": "uri",
+                "title": "Output",
+                "x-order": 0
+              }
+            },
+            "data": {
+              "Output": null
+            }
+          },
+          "settings_params": {},
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 2354,
+          "y": 1815
+        }
+      },
+      {
+        "id": "tqAT-vetkastar-fooocus",
+        "data": {
+          "name": "Fooocus",
+          "processor": "mlscade/fooocus",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "prompt": "create an image of man sitting on chair on road side, in midnight and raining",
+            "cn_type1": "FaceSwap",
+            "cn_type2": "FaceSwap",
+            "cn_type3": "FaceSwap",
+            "cn_type4": "FaceSwap",
+            "sharpness": 2,
+            "image_seed": -1,
+            "uov_method": "Disabled",
+            "adaptive_cfg": 7,
+            "image_number": 1,
+            "sampler_name": "dpmpp_2m_sde_gpu",
+            "adm_scaler_end": 0.3,
+            "guidance_scale": 16,
+            "inpaint_engine": "v2.6",
+            "overwrite_step": -1,
+            "refiner_switch": 0.5,
+            "scheduler_name": "karras",
+            "negative_prompt": "",
+            "overwrite_width": -1,
+            "inpaint_strength": 0.5,
+            "overwrite_height": -1,
+            "overwrite_switch": -1,
+            "style_selections": "Fooocus V2,Fooocus Enhance,Fooocus Sharp",
+            "loras_custom_urls": "",
+            "uov_upscale_value": 0,
+            "use_default_loras": false,
+            "adm_scaler_negative": 0.8,
+            "adm_scaler_positive": 1.5,
+            "canny_low_threshold": 64,
+            "controlnet_softness": 0.25,
+            "outpaint_selections": "",
+            "canny_high_threshold": 128,
+            "invert_mask_checkbox": false,
+            "outpaint_distance_top": 0,
+            "performance_selection": "Quality",
+            "outpaint_distance_left": 0,
+            "aspect_ratios_selection": "1152*896",
+            "inpaint_erode_or_dilate": 0,
+            "outpaint_distance_right": 0,
+            "overwrite_vary_strength": -1,
+            "inpaint_respective_field": 1,
+            "outpaint_distance_bottom": 0,
+            "skipping_cn_preprocessor": false,
+            "debugging_cn_preprocessor": false,
+            "inpaint_additional_prompt": "",
+            "overwrite_upscale_strength": -1,
+            "debugging_inpaint_preprocessor": false,
+            "inpaint_disable_initial_latent": false,
+            "mixing_image_prompt_and_inpaint": false,
+            "mixing_image_prompt_and_vary_upscale": false,
+            "is_priority_queue": false,
+            "cn_img1": null,
+            "cn_img2": null,
+            "cn_img3": null,
+            "cn_img4": null,
+            "cn_weight1": null,
+            "cn_weight2": null,
+            "cn_weight3": null,
+            "cn_weight4": null
+          },
+          "settings_params": {
+            "prompt": {
+              "parameter_type": null
+            },
+            "negative_prompt": {
+              "parameter_type": null
+            },
+            "style_selections": {
+              "parameter_type": null
+            },
+            "performance_selection": {
+              "parameter_type": null
+            },
+            "aspect_ratios_selection": {
+              "parameter_type": null
+            },
+            "image_number": {
+              "parameter_type": null
+            },
+            "image_seed": {
+              "parameter_type": null
+            },
+            "use_default_loras": {
+              "parameter_type": null
+            },
+            "loras_custom_urls": {
+              "parameter_type": null
+            },
+            "sharpness": {
+              "parameter_type": null
+            },
+            "guidance_scale": {
+              "parameter_type": null
+            },
+            "refiner_switch": {
+              "parameter_type": null
+            },
+            "uov_input_image": {
+              "parameter_type": null
+            },
+            "uov_method": {
+              "parameter_type": null
+            },
+            "uov_upscale_value": {
+              "parameter_type": null
+            },
+            "inpaint_additional_prompt": {
+              "parameter_type": null
+            },
+            "inpaint_input_image": {
+              "parameter_type": null
+            },
+            "inpaint_input_mask": {
+              "parameter_type": null
+            },
+            "inpaint_strength": {
+              "parameter_type": null
+            },
+            "outpaint_selections": {
+              "parameter_type": null
+            },
+            "outpaint_distance_left": {
+              "parameter_type": null
+            },
+            "outpaint_distance_top": {
+              "parameter_type": null
+            },
+            "outpaint_distance_right": {
+              "parameter_type": null
+            },
+            "outpaint_distance_bottom": {
+              "parameter_type": null
+            },
+            "cn_img1": {
+              "parameter_type": null
+            },
+            "cn_stop1": {
+              "parameter_type": null
+            },
+            "cn_weight1": {
+              "parameter_type": null
+            },
+            "cn_type1": {
+              "parameter_type": null
+            },
+            "cn_img2": {
+              "parameter_type": null
+            },
+            "cn_stop2": {
+              "parameter_type": null
+            },
+            "cn_weight2": {
+              "parameter_type": null
+            },
+            "cn_type2": {
+              "parameter_type": null
+            },
+            "cn_img3": {
+              "parameter_type": null
+            },
+            "cn_stop3": {
+              "parameter_type": null
+            },
+            "cn_weight3": {
+              "parameter_type": null
+            },
+            "cn_type3": {
+              "parameter_type": null
+            },
+            "cn_img4": {
+              "parameter_type": null
+            },
+            "cn_stop4": {
+              "parameter_type": null
+            },
+            "cn_weight4": {
+              "parameter_type": null
+            },
+            "cn_type4": {
+              "parameter_type": null
+            },
+            "adm_scaler_positive": {
+              "parameter_type": null
+            },
+            "adm_scaler_negative": {
+              "parameter_type": null
+            },
+            "adm_scaler_end": {
+              "parameter_type": null
+            },
+            "adaptive_cfg": {
+              "parameter_type": null
+            },
+            "sampler_name": {
+              "parameter_type": null
+            },
+            "scheduler_name": {
+              "parameter_type": null
+            },
+            "overwrite_step": {
+              "parameter_type": null
+            },
+            "overwrite_switch": {
+              "parameter_type": null
+            },
+            "overwrite_width": {
+              "parameter_type": null
+            },
+            "overwrite_height": {
+              "parameter_type": null
+            },
+            "overwrite_vary_strength": {
+              "parameter_type": null
+            },
+            "overwrite_upscale_strength": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_vary_upscale": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_inpaint": {
+              "parameter_type": null
+            },
+            "debugging_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "skipping_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "canny_low_threshold": {
+              "parameter_type": null
+            },
+            "canny_high_threshold": {
+              "parameter_type": null
+            },
+            "controlnet_softness": {
+              "parameter_type": null
+            },
+            "debugging_inpaint_preprocessor": {
+              "parameter_type": null
+            },
+            "inpaint_disable_initial_latent": {
+              "parameter_type": null
+            },
+            "inpaint_engine": {
+              "parameter_type": null
+            },
+            "inpaint_respective_field": {
+              "parameter_type": null
+            },
+            "invert_mask_checkbox": {
+              "parameter_type": null
+            },
+            "inpaint_erode_or_dilate": {
+              "parameter_type": null
+            },
+            "is_priority_queue": {
+              "parameter_type": null
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 1512,
+          "y": 209
+        }
+      },
+      {
+        "id": "mbdQ-vetkastar-fooocus",
+        "data": {
+          "name": "Fooocus",
+          "processor": "mlscade/fooocus",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "prompt": "",
+            "cn_type1": "ImagePrompt",
+            "cn_type2": "ImagePrompt",
+            "cn_type3": "ImagePrompt",
+            "cn_type4": "ImagePrompt",
+            "sharpness": 2,
+            "image_seed": -1,
+            "uov_method": "Upscale (2x)",
+            "adaptive_cfg": 7,
+            "image_number": 1,
+            "sampler_name": "dpmpp_2m_sde_gpu",
+            "adm_scaler_end": 0.3,
+            "guidance_scale": 4,
+            "inpaint_engine": "v2.6",
+            "overwrite_step": -1,
+            "refiner_switch": 0.5,
+            "scheduler_name": "karras",
+            "negative_prompt": "",
+            "overwrite_width": -1,
+            "inpaint_strength": 0.5,
+            "overwrite_height": -1,
+            "overwrite_switch": -1,
+            "style_selections": "Fooocus V2,Fooocus Enhance,Fooocus Sharp",
+            "loras_custom_urls": "",
+            "uov_upscale_value": 0,
+            "use_default_loras": true,
+            "adm_scaler_negative": 0.8,
+            "adm_scaler_positive": 1.5,
+            "canny_low_threshold": 64,
+            "controlnet_softness": 0.25,
+            "outpaint_selections": "",
+            "canny_high_threshold": 128,
+            "invert_mask_checkbox": false,
+            "outpaint_distance_top": 0,
+            "performance_selection": "Speed",
+            "outpaint_distance_left": 0,
+            "aspect_ratios_selection": "1152*896",
+            "inpaint_erode_or_dilate": 0,
+            "outpaint_distance_right": 0,
+            "overwrite_vary_strength": -1,
+            "inpaint_respective_field": 1,
+            "outpaint_distance_bottom": 0,
+            "skipping_cn_preprocessor": false,
+            "debugging_cn_preprocessor": false,
+            "inpaint_additional_prompt": "",
+            "overwrite_upscale_strength": -1,
+            "debugging_inpaint_preprocessor": false,
+            "inpaint_disable_initial_latent": false,
+            "mixing_image_prompt_and_inpaint": false,
+            "mixing_image_prompt_and_vary_upscale": false,
+            "is_priority_queue": false,
+            "uov_input_image": null
+          },
+          "settings_params": {
+            "prompt": {
+              "parameter_type": null
+            },
+            "negative_prompt": {
+              "parameter_type": null
+            },
+            "style_selections": {
+              "parameter_type": null
+            },
+            "performance_selection": {
+              "parameter_type": null
+            },
+            "aspect_ratios_selection": {
+              "parameter_type": null
+            },
+            "image_number": {
+              "parameter_type": null
+            },
+            "image_seed": {
+              "parameter_type": null
+            },
+            "use_default_loras": {
+              "parameter_type": null
+            },
+            "loras_custom_urls": {
+              "parameter_type": null
+            },
+            "sharpness": {
+              "parameter_type": null
+            },
+            "guidance_scale": {
+              "parameter_type": null
+            },
+            "refiner_switch": {
+              "parameter_type": null
+            },
+            "uov_input_image": {
+              "parameter_type": null
+            },
+            "uov_method": {
+              "parameter_type": null
+            },
+            "uov_upscale_value": {
+              "parameter_type": null
+            },
+            "inpaint_additional_prompt": {
+              "parameter_type": null
+            },
+            "inpaint_input_image": {
+              "parameter_type": null
+            },
+            "inpaint_input_mask": {
+              "parameter_type": null
+            },
+            "inpaint_strength": {
+              "parameter_type": null
+            },
+            "outpaint_selections": {
+              "parameter_type": null
+            },
+            "outpaint_distance_left": {
+              "parameter_type": null
+            },
+            "outpaint_distance_top": {
+              "parameter_type": null
+            },
+            "outpaint_distance_right": {
+              "parameter_type": null
+            },
+            "outpaint_distance_bottom": {
+              "parameter_type": null
+            },
+            "cn_img1": {
+              "parameter_type": null
+            },
+            "cn_stop1": {
+              "parameter_type": null
+            },
+            "cn_weight1": {
+              "parameter_type": null
+            },
+            "cn_type1": {
+              "parameter_type": null
+            },
+            "cn_img2": {
+              "parameter_type": null
+            },
+            "cn_stop2": {
+              "parameter_type": null
+            },
+            "cn_weight2": {
+              "parameter_type": null
+            },
+            "cn_type2": {
+              "parameter_type": null
+            },
+            "cn_img3": {
+              "parameter_type": null
+            },
+            "cn_stop3": {
+              "parameter_type": null
+            },
+            "cn_weight3": {
+              "parameter_type": null
+            },
+            "cn_type3": {
+              "parameter_type": null
+            },
+            "cn_img4": {
+              "parameter_type": null
+            },
+            "cn_stop4": {
+              "parameter_type": null
+            },
+            "cn_weight4": {
+              "parameter_type": null
+            },
+            "cn_type4": {
+              "parameter_type": null
+            },
+            "adm_scaler_positive": {
+              "parameter_type": null
+            },
+            "adm_scaler_negative": {
+              "parameter_type": null
+            },
+            "adm_scaler_end": {
+              "parameter_type": null
+            },
+            "adaptive_cfg": {
+              "parameter_type": null
+            },
+            "sampler_name": {
+              "parameter_type": null
+            },
+            "scheduler_name": {
+              "parameter_type": null
+            },
+            "overwrite_step": {
+              "parameter_type": null
+            },
+            "overwrite_switch": {
+              "parameter_type": null
+            },
+            "overwrite_width": {
+              "parameter_type": null
+            },
+            "overwrite_height": {
+              "parameter_type": null
+            },
+            "overwrite_vary_strength": {
+              "parameter_type": null
+            },
+            "overwrite_upscale_strength": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_vary_upscale": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_inpaint": {
+              "parameter_type": null
+            },
+            "debugging_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "skipping_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "canny_low_threshold": {
+              "parameter_type": null
+            },
+            "canny_high_threshold": {
+              "parameter_type": null
+            },
+            "controlnet_softness": {
+              "parameter_type": null
+            },
+            "debugging_inpaint_preprocessor": {
+              "parameter_type": null
+            },
+            "inpaint_disable_initial_latent": {
+              "parameter_type": null
+            },
+            "inpaint_engine": {
+              "parameter_type": null
+            },
+            "inpaint_respective_field": {
+              "parameter_type": null
+            },
+            "invert_mask_checkbox": {
+              "parameter_type": null
+            },
+            "inpaint_erode_or_dilate": {
+              "parameter_type": null
+            },
+            "is_priority_queue": {
+              "parameter_type": null
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 1558,
+          "y": 2160
+        }
+      },
+      {
+        "id": "UYiG-vetkastar-fooocus",
+        "data": {
+          "name": "Fooocus",
+          "processor": "mlscade/fooocus",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "prompt": "",
+            "cn_type1": "ImagePrompt",
+            "cn_type2": "ImagePrompt",
+            "cn_type3": "ImagePrompt",
+            "cn_type4": "ImagePrompt",
+            "sharpness": 2,
+            "image_seed": -1,
+            "uov_method": "Vary (Subtle)",
+            "adaptive_cfg": 7,
+            "image_number": 1,
+            "sampler_name": "dpmpp_2m_sde_gpu",
+            "adm_scaler_end": 0.3,
+            "guidance_scale": 4,
+            "inpaint_engine": "v2.6",
+            "overwrite_step": -1,
+            "refiner_switch": 0.5,
+            "scheduler_name": "karras",
+            "negative_prompt": "",
+            "overwrite_width": -1,
+            "inpaint_strength": 0.5,
+            "overwrite_height": -1,
+            "overwrite_switch": -1,
+            "style_selections": "Fooocus V2,Fooocus Enhance,Fooocus Sharp",
+            "loras_custom_urls": "",
+            "uov_upscale_value": 0,
+            "use_default_loras": true,
+            "adm_scaler_negative": 0.8,
+            "adm_scaler_positive": 1.5,
+            "canny_low_threshold": 64,
+            "controlnet_softness": 0.25,
+            "outpaint_selections": "",
+            "canny_high_threshold": 128,
+            "invert_mask_checkbox": false,
+            "outpaint_distance_top": 0,
+            "performance_selection": "Speed",
+            "outpaint_distance_left": 0,
+            "aspect_ratios_selection": "1152*896",
+            "inpaint_erode_or_dilate": 0,
+            "outpaint_distance_right": 0,
+            "overwrite_vary_strength": -1,
+            "inpaint_respective_field": 1,
+            "outpaint_distance_bottom": 0,
+            "skipping_cn_preprocessor": false,
+            "debugging_cn_preprocessor": false,
+            "inpaint_additional_prompt": "",
+            "overwrite_upscale_strength": -1,
+            "debugging_inpaint_preprocessor": false,
+            "inpaint_disable_initial_latent": false,
+            "mixing_image_prompt_and_inpaint": false,
+            "mixing_image_prompt_and_vary_upscale": false,
+            "is_priority_queue": false,
+            "uov_input_image": null
+          },
+          "settings_params": {
+            "prompt": {
+              "parameter_type": null
+            },
+            "negative_prompt": {
+              "parameter_type": null
+            },
+            "style_selections": {
+              "parameter_type": null
+            },
+            "performance_selection": {
+              "parameter_type": null
+            },
+            "aspect_ratios_selection": {
+              "parameter_type": null
+            },
+            "image_number": {
+              "parameter_type": null
+            },
+            "image_seed": {
+              "parameter_type": null
+            },
+            "use_default_loras": {
+              "parameter_type": null
+            },
+            "loras_custom_urls": {
+              "parameter_type": null
+            },
+            "sharpness": {
+              "parameter_type": null
+            },
+            "guidance_scale": {
+              "parameter_type": null
+            },
+            "refiner_switch": {
+              "parameter_type": null
+            },
+            "uov_input_image": {
+              "parameter_type": null
+            },
+            "uov_method": {
+              "parameter_type": null
+            },
+            "uov_upscale_value": {
+              "parameter_type": null
+            },
+            "inpaint_additional_prompt": {
+              "parameter_type": null
+            },
+            "inpaint_input_image": {
+              "parameter_type": null
+            },
+            "inpaint_input_mask": {
+              "parameter_type": null
+            },
+            "inpaint_strength": {
+              "parameter_type": null
+            },
+            "outpaint_selections": {
+              "parameter_type": null
+            },
+            "outpaint_distance_left": {
+              "parameter_type": null
+            },
+            "outpaint_distance_top": {
+              "parameter_type": null
+            },
+            "outpaint_distance_right": {
+              "parameter_type": null
+            },
+            "outpaint_distance_bottom": {
+              "parameter_type": null
+            },
+            "cn_img1": {
+              "parameter_type": null
+            },
+            "cn_stop1": {
+              "parameter_type": null
+            },
+            "cn_weight1": {
+              "parameter_type": null
+            },
+            "cn_type1": {
+              "parameter_type": null
+            },
+            "cn_img2": {
+              "parameter_type": null
+            },
+            "cn_stop2": {
+              "parameter_type": null
+            },
+            "cn_weight2": {
+              "parameter_type": null
+            },
+            "cn_type2": {
+              "parameter_type": null
+            },
+            "cn_img3": {
+              "parameter_type": null
+            },
+            "cn_stop3": {
+              "parameter_type": null
+            },
+            "cn_weight3": {
+              "parameter_type": null
+            },
+            "cn_type3": {
+              "parameter_type": null
+            },
+            "cn_img4": {
+              "parameter_type": null
+            },
+            "cn_stop4": {
+              "parameter_type": null
+            },
+            "cn_weight4": {
+              "parameter_type": null
+            },
+            "cn_type4": {
+              "parameter_type": null
+            },
+            "adm_scaler_positive": {
+              "parameter_type": null
+            },
+            "adm_scaler_negative": {
+              "parameter_type": null
+            },
+            "adm_scaler_end": {
+              "parameter_type": null
+            },
+            "adaptive_cfg": {
+              "parameter_type": null
+            },
+            "sampler_name": {
+              "parameter_type": null
+            },
+            "scheduler_name": {
+              "parameter_type": null
+            },
+            "overwrite_step": {
+              "parameter_type": null
+            },
+            "overwrite_switch": {
+              "parameter_type": null
+            },
+            "overwrite_width": {
+              "parameter_type": null
+            },
+            "overwrite_height": {
+              "parameter_type": null
+            },
+            "overwrite_vary_strength": {
+              "parameter_type": null
+            },
+            "overwrite_upscale_strength": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_vary_upscale": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_inpaint": {
+              "parameter_type": null
+            },
+            "debugging_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "skipping_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "canny_low_threshold": {
+              "parameter_type": null
+            },
+            "canny_high_threshold": {
+              "parameter_type": null
+            },
+            "controlnet_softness": {
+              "parameter_type": null
+            },
+            "debugging_inpaint_preprocessor": {
+              "parameter_type": null
+            },
+            "inpaint_disable_initial_latent": {
+              "parameter_type": null
+            },
+            "inpaint_engine": {
+              "parameter_type": null
+            },
+            "inpaint_respective_field": {
+              "parameter_type": null
+            },
+            "invert_mask_checkbox": {
+              "parameter_type": null
+            },
+            "inpaint_erode_or_dilate": {
+              "parameter_type": null
+            },
+            "is_priority_queue": {
+              "parameter_type": null
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 830,
+          "y": 3258
+        }
+      },
+      {
+        "id": "wFps-if-condition-stop-execution",
+        "data": {
+          "name": "Conditional Branching (IF) (Stop Execution)",
+          "processor": "if-condition-stop-execution",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "condition": "",
+            "input": "pass"
+          },
+          "settings_params": {
+            "condition": {
+              "parameter_type": null
+            },
+            "input": {
+              "parameter_type": "executed_code"
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 305,
+          "y": 2812
+        }
+      },
+      {
+        "id": "XC4n-if-condition-stop-execution",
+        "data": {
+          "name": "Conditional Branching (IF) (Stop Execution)",
+          "processor": "if-condition-stop-execution",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "condition": "",
+            "input": "pass"
+          },
+          "settings_params": {
+            "condition": {
+              "parameter_type": null
+            },
+            "input": {
+              "parameter_type": "executed_code"
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 893,
+          "y": 2318
+        }
+      },
+      {
+        "id": "CQFu-if-condition-stop-execution",
+        "data": {
+          "name": "Conditional Branching (IF) (Stop Execution)",
+          "processor": "if-condition-stop-execution",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "condition": "",
+            "input": "pass"
+          },
+          "settings_params": {
+            "condition": {
+              "parameter_type": null
+            },
+            "input": {
+              "parameter_type": "executed_code"
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 908,
+          "y": 37
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "reactflow__edge-startCN_image_1-tqAT-vetkastar-fooocuscn_img1",
+        "from_node": "start",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "CN_image_1",
+            "to_field": "cn_img1"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startCN_image_2-tqAT-vetkastar-fooocuscn_img2",
+        "from_node": "start",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "CN_image_2",
+            "to_field": "cn_img2"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startCN_image_3-tqAT-vetkastar-fooocuscn_img3",
+        "from_node": "start",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "CN_image_3",
+            "to_field": "cn_img3"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startCN_image_4-tqAT-vetkastar-fooocuscn_img4",
+        "from_node": "start",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "CN_image_4",
+            "to_field": "cn_img4"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startcn2_w-tqAT-vetkastar-fooocuscn_weight2",
+        "from_node": "start",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "cn2_w",
+            "to_field": "cn_weight2"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startcn3_w-tqAT-vetkastar-fooocuscn_weight3",
+        "from_node": "start",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "cn3_w",
+            "to_field": "cn_weight3"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startcn4_w-tqAT-vetkastar-fooocuscn_weight4",
+        "from_node": "start",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "cn4_w",
+            "to_field": "cn_weight4"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startCN_image_1-mbdQ-vetkastar-fooocusuov_input_image",
+        "from_node": "start",
+        "to_node": "mbdQ-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "CN_image_1",
+            "to_field": "uov_input_image"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startCN_image_1-UYiG-vetkastar-fooocusuov_input_image",
+        "from_node": "start",
+        "to_node": "UYiG-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "CN_image_1",
+            "to_field": "uov_input_image"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-tqAT-vetkastar-fooocussuccess-endOutput",
+        "from_node": "tqAT-vetkastar-fooocus",
+        "to_node": "end",
+        "fields_mapping": [
+          {
+            "from_field": "success",
+            "to_field": "Output"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-mbdQ-vetkastar-fooocussuccess-endOutput",
+        "from_node": "mbdQ-vetkastar-fooocus",
+        "to_node": "end",
+        "fields_mapping": [
+          {
+            "from_field": "success",
+            "to_field": "Output"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-UYiG-vetkastar-fooocussuccess-endOutput",
+        "from_node": "UYiG-vetkastar-fooocus",
+        "to_node": "end",
+        "fields_mapping": [
+          {
+            "from_field": "success",
+            "to_field": "Output"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startprompt_Image-tqAT-vetkastar-fooocusprompt",
+        "from_node": "start",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "prompt_Image",
+            "to_field": "prompt"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startcn1_w-tqAT-vetkastar-fooocuscn_weight1",
+        "from_node": "start",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "cn1_w",
+            "to_field": "cn_weight1"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-wFps-if-condition-stop-executiontrue-UYiG-vetkastar-fooocus@",
+        "from_node": "wFps-if-condition-stop-execution",
+        "to_node": "UYiG-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "true",
+            "to_field": "@"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startVariance-wFps-if-condition-stop-executioncondition",
+        "from_node": "start",
+        "to_node": "wFps-if-condition-stop-execution",
+        "fields_mapping": [
+          {
+            "from_field": "Variance",
+            "to_field": "condition"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startUpscale-XC4n-if-condition-stop-executioncondition",
+        "from_node": "start",
+        "to_node": "XC4n-if-condition-stop-execution",
+        "fields_mapping": [
+          {
+            "from_field": "Upscale",
+            "to_field": "condition"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-XC4n-if-condition-stop-executiontrue-mbdQ-vetkastar-fooocus@",
+        "from_node": "XC4n-if-condition-stop-execution",
+        "to_node": "mbdQ-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "true",
+            "to_field": "@"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-startFace_Swap-CQFu-if-condition-stop-executioncondition",
+        "from_node": "start",
+        "to_node": "CQFu-if-condition-stop-execution",
+        "fields_mapping": [
+          {
+            "from_field": "Face_Swap",
+            "to_field": "condition"
+          }
+        ]
+      },
+      {
+        "id": "reactflow__edge-CQFu-if-condition-stop-executiontrue-tqAT-vetkastar-fooocus@",
+        "from_node": "CQFu-if-condition-stop-execution",
+        "to_node": "tqAT-vetkastar-fooocus",
+        "fields_mapping": [
+          {
+            "from_field": "true",
+            "to_field": "@"
+          }
+        ]
+      }
+    ],
+    "nodes_dict": {
+      "start": {
+        "id": "start",
+        "data": {
+          "name": "Start Node",
+          "processor": "start",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "inputs": {
+              "prompt_Image": {
+                "type": "string",
+                "title": "image_prompt",
+                "x-order": 0
+              },
+              "CN_image_2": {
+                "type": "string",
+                "format": "uri",
+                "title": "CN Image 2",
+                "x-order": 6
+              },
+              "CN_image_1": {
+                "type": "string",
+                "format": "uri",
+                "title": "CN image 1",
+                "x-order": 4
+              },
+              "CN_image_3": {
+                "type": "string",
+                "title": "CN image 3",
+                "x-order": 8,
+                "format": "uri"
+              },
+              "CN_image_4": {
+                "type": "string",
+                "title": "CN image 4",
+                "x-order": 10,
+                "format": "uri"
+              },
+              "cn1_w": {
+                "type": "number",
+                "title": "cn1 weight",
+                "x-order": 5
+              },
+              "cn2_w": {
+                "type": "number",
+                "title": "cn2 weight",
+                "x-order": 7
+              },
+              "cn3_w": {
+                "type": "number",
+                "title": "cn3 weight",
+                "x-order": 9
+              },
+              "cn4_w": {
+                "type": "number",
+                "title": "cn4 weight",
+                "x-order": 11
+              },
+              "Face_Swap": {
+                "type": "boolean",
+                "title": "Face Swap",
+                "x-order": 1
+              },
+              "Upscale": {
+                "type": "boolean",
+                "title": "Upscale",
+                "x-order": 3
+              },
+              "Variance": {
+                "type": "boolean",
+                "title": "Variance",
+                "x-order": 2
+              }
+            },
+            "data": {
+              "prompt_Image": "image of boy in lamborgini with sunglasses",
+              "CN_image_1": null,
+              "CN_image_2": null,
+              "CN_image_3": null,
+              "CN_image_4": null,
+              "cn1_w": 1.6,
+              "cn2_w": 1.6,
+              "cn3_w": 1.6,
+              "cn4_w": 1.6,
+              "Face_Swap": true,
+              "Upscale": false,
+              "Variance": false
+            }
+          },
+          "settings_params": {
+            "prompt_Image": {
+              "parameter_type": null
+            },
+            "CN_image_1": {
+              "parameter_type": null
+            },
+            "cn1_w": {
+              "parameter_type": null
+            },
+            "CN_image_2": {
+              "parameter_type": null
+            },
+            "cn2_w": {
+              "parameter_type": null
+            },
+            "CN_image_3": {
+              "parameter_type": null
+            },
+            "cn3_w": {
+              "parameter_type": null
+            },
+            "CN_image_4": {
+              "parameter_type": null
+            },
+            "cn4_w": {
+              "parameter_type": null
+            },
+            "Face_Swap": {
+              "parameter_type": null
+            },
+            "Variance": {
+              "parameter_type": null
+            },
+            "Upscale": {
+              "parameter_type": null
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 390,
+          "y": 85
+        }
+      },
+      "end": {
+        "id": "end",
+        "data": {
+          "name": "End Node",
+          "processor": "end",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "inputs": {
+              "Output": {
+                "type": "string",
+                "format": "uri",
+                "title": "Output",
+                "x-order": 0
+              }
+            },
+            "data": {
+              "Output": null
+            }
+          },
+          "settings_params": {},
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 2354,
+          "y": 1815
+        }
+      },
+      "tqAT-vetkastar-fooocus": {
+        "id": "tqAT-vetkastar-fooocus",
+        "data": {
+          "name": "Fooocus",
+          "processor": "mlscade/fooocus",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "prompt": "create an image of man sitting on chair on road side, in midnight and raining",
+            "cn_type1": "FaceSwap",
+            "cn_type2": "FaceSwap",
+            "cn_type3": "FaceSwap",
+            "cn_type4": "FaceSwap",
+            "sharpness": 2,
+            "image_seed": -1,
+            "uov_method": "Disabled",
+            "adaptive_cfg": 7,
+            "image_number": 1,
+            "sampler_name": "dpmpp_2m_sde_gpu",
+            "adm_scaler_end": 0.3,
+            "guidance_scale": 16,
+            "inpaint_engine": "v2.6",
+            "overwrite_step": -1,
+            "refiner_switch": 0.5,
+            "scheduler_name": "karras",
+            "negative_prompt": "",
+            "overwrite_width": -1,
+            "inpaint_strength": 0.5,
+            "overwrite_height": -1,
+            "overwrite_switch": -1,
+            "style_selections": "Fooocus V2,Fooocus Enhance,Fooocus Sharp",
+            "loras_custom_urls": "",
+            "uov_upscale_value": 0,
+            "use_default_loras": false,
+            "adm_scaler_negative": 0.8,
+            "adm_scaler_positive": 1.5,
+            "canny_low_threshold": 64,
+            "controlnet_softness": 0.25,
+            "outpaint_selections": "",
+            "canny_high_threshold": 128,
+            "invert_mask_checkbox": false,
+            "outpaint_distance_top": 0,
+            "performance_selection": "Quality",
+            "outpaint_distance_left": 0,
+            "aspect_ratios_selection": "1152*896",
+            "inpaint_erode_or_dilate": 0,
+            "outpaint_distance_right": 0,
+            "overwrite_vary_strength": -1,
+            "inpaint_respective_field": 1,
+            "outpaint_distance_bottom": 0,
+            "skipping_cn_preprocessor": false,
+            "debugging_cn_preprocessor": false,
+            "inpaint_additional_prompt": "",
+            "overwrite_upscale_strength": -1,
+            "debugging_inpaint_preprocessor": false,
+            "inpaint_disable_initial_latent": false,
+            "mixing_image_prompt_and_inpaint": false,
+            "mixing_image_prompt_and_vary_upscale": false,
+            "is_priority_queue": false,
+            "cn_img1": null,
+            "cn_img2": null,
+            "cn_img3": null,
+            "cn_img4": null,
+            "cn_weight1": null,
+            "cn_weight2": null,
+            "cn_weight3": null,
+            "cn_weight4": null
+          },
+          "settings_params": {
+            "prompt": {
+              "parameter_type": null
+            },
+            "negative_prompt": {
+              "parameter_type": null
+            },
+            "style_selections": {
+              "parameter_type": null
+            },
+            "performance_selection": {
+              "parameter_type": null
+            },
+            "aspect_ratios_selection": {
+              "parameter_type": null
+            },
+            "image_number": {
+              "parameter_type": null
+            },
+            "image_seed": {
+              "parameter_type": null
+            },
+            "use_default_loras": {
+              "parameter_type": null
+            },
+            "loras_custom_urls": {
+              "parameter_type": null
+            },
+            "sharpness": {
+              "parameter_type": null
+            },
+            "guidance_scale": {
+              "parameter_type": null
+            },
+            "refiner_switch": {
+              "parameter_type": null
+            },
+            "uov_input_image": {
+              "parameter_type": null
+            },
+            "uov_method": {
+              "parameter_type": null
+            },
+            "uov_upscale_value": {
+              "parameter_type": null
+            },
+            "inpaint_additional_prompt": {
+              "parameter_type": null
+            },
+            "inpaint_input_image": {
+              "parameter_type": null
+            },
+            "inpaint_input_mask": {
+              "parameter_type": null
+            },
+            "inpaint_strength": {
+              "parameter_type": null
+            },
+            "outpaint_selections": {
+              "parameter_type": null
+            },
+            "outpaint_distance_left": {
+              "parameter_type": null
+            },
+            "outpaint_distance_top": {
+              "parameter_type": null
+            },
+            "outpaint_distance_right": {
+              "parameter_type": null
+            },
+            "outpaint_distance_bottom": {
+              "parameter_type": null
+            },
+            "cn_img1": {
+              "parameter_type": null
+            },
+            "cn_stop1": {
+              "parameter_type": null
+            },
+            "cn_weight1": {
+              "parameter_type": null
+            },
+            "cn_type1": {
+              "parameter_type": null
+            },
+            "cn_img2": {
+              "parameter_type": null
+            },
+            "cn_stop2": {
+              "parameter_type": null
+            },
+            "cn_weight2": {
+              "parameter_type": null
+            },
+            "cn_type2": {
+              "parameter_type": null
+            },
+            "cn_img3": {
+              "parameter_type": null
+            },
+            "cn_stop3": {
+              "parameter_type": null
+            },
+            "cn_weight3": {
+              "parameter_type": null
+            },
+            "cn_type3": {
+              "parameter_type": null
+            },
+            "cn_img4": {
+              "parameter_type": null
+            },
+            "cn_stop4": {
+              "parameter_type": null
+            },
+            "cn_weight4": {
+              "parameter_type": null
+            },
+            "cn_type4": {
+              "parameter_type": null
+            },
+            "adm_scaler_positive": {
+              "parameter_type": null
+            },
+            "adm_scaler_negative": {
+              "parameter_type": null
+            },
+            "adm_scaler_end": {
+              "parameter_type": null
+            },
+            "adaptive_cfg": {
+              "parameter_type": null
+            },
+            "sampler_name": {
+              "parameter_type": null
+            },
+            "scheduler_name": {
+              "parameter_type": null
+            },
+            "overwrite_step": {
+              "parameter_type": null
+            },
+            "overwrite_switch": {
+              "parameter_type": null
+            },
+            "overwrite_width": {
+              "parameter_type": null
+            },
+            "overwrite_height": {
+              "parameter_type": null
+            },
+            "overwrite_vary_strength": {
+              "parameter_type": null
+            },
+            "overwrite_upscale_strength": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_vary_upscale": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_inpaint": {
+              "parameter_type": null
+            },
+            "debugging_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "skipping_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "canny_low_threshold": {
+              "parameter_type": null
+            },
+            "canny_high_threshold": {
+              "parameter_type": null
+            },
+            "controlnet_softness": {
+              "parameter_type": null
+            },
+            "debugging_inpaint_preprocessor": {
+              "parameter_type": null
+            },
+            "inpaint_disable_initial_latent": {
+              "parameter_type": null
+            },
+            "inpaint_engine": {
+              "parameter_type": null
+            },
+            "inpaint_respective_field": {
+              "parameter_type": null
+            },
+            "invert_mask_checkbox": {
+              "parameter_type": null
+            },
+            "inpaint_erode_or_dilate": {
+              "parameter_type": null
+            },
+            "is_priority_queue": {
+              "parameter_type": null
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 1512,
+          "y": 209
+        }
+      },
+      "mbdQ-vetkastar-fooocus": {
+        "id": "mbdQ-vetkastar-fooocus",
+        "data": {
+          "name": "Fooocus",
+          "processor": "mlscade/fooocus",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "prompt": "",
+            "cn_type1": "ImagePrompt",
+            "cn_type2": "ImagePrompt",
+            "cn_type3": "ImagePrompt",
+            "cn_type4": "ImagePrompt",
+            "sharpness": 2,
+            "image_seed": -1,
+            "uov_method": "Upscale (2x)",
+            "adaptive_cfg": 7,
+            "image_number": 1,
+            "sampler_name": "dpmpp_2m_sde_gpu",
+            "adm_scaler_end": 0.3,
+            "guidance_scale": 4,
+            "inpaint_engine": "v2.6",
+            "overwrite_step": -1,
+            "refiner_switch": 0.5,
+            "scheduler_name": "karras",
+            "negative_prompt": "",
+            "overwrite_width": -1,
+            "inpaint_strength": 0.5,
+            "overwrite_height": -1,
+            "overwrite_switch": -1,
+            "style_selections": "Fooocus V2,Fooocus Enhance,Fooocus Sharp",
+            "loras_custom_urls": "",
+            "uov_upscale_value": 0,
+            "use_default_loras": true,
+            "adm_scaler_negative": 0.8,
+            "adm_scaler_positive": 1.5,
+            "canny_low_threshold": 64,
+            "controlnet_softness": 0.25,
+            "outpaint_selections": "",
+            "canny_high_threshold": 128,
+            "invert_mask_checkbox": false,
+            "outpaint_distance_top": 0,
+            "performance_selection": "Speed",
+            "outpaint_distance_left": 0,
+            "aspect_ratios_selection": "1152*896",
+            "inpaint_erode_or_dilate": 0,
+            "outpaint_distance_right": 0,
+            "overwrite_vary_strength": -1,
+            "inpaint_respective_field": 1,
+            "outpaint_distance_bottom": 0,
+            "skipping_cn_preprocessor": false,
+            "debugging_cn_preprocessor": false,
+            "inpaint_additional_prompt": "",
+            "overwrite_upscale_strength": -1,
+            "debugging_inpaint_preprocessor": false,
+            "inpaint_disable_initial_latent": false,
+            "mixing_image_prompt_and_inpaint": false,
+            "mixing_image_prompt_and_vary_upscale": false,
+            "is_priority_queue": false,
+            "uov_input_image": null
+          },
+          "settings_params": {
+            "prompt": {
+              "parameter_type": null
+            },
+            "negative_prompt": {
+              "parameter_type": null
+            },
+            "style_selections": {
+              "parameter_type": null
+            },
+            "performance_selection": {
+              "parameter_type": null
+            },
+            "aspect_ratios_selection": {
+              "parameter_type": null
+            },
+            "image_number": {
+              "parameter_type": null
+            },
+            "image_seed": {
+              "parameter_type": null
+            },
+            "use_default_loras": {
+              "parameter_type": null
+            },
+            "loras_custom_urls": {
+              "parameter_type": null
+            },
+            "sharpness": {
+              "parameter_type": null
+            },
+            "guidance_scale": {
+              "parameter_type": null
+            },
+            "refiner_switch": {
+              "parameter_type": null
+            },
+            "uov_input_image": {
+              "parameter_type": null
+            },
+            "uov_method": {
+              "parameter_type": null
+            },
+            "uov_upscale_value": {
+              "parameter_type": null
+            },
+            "inpaint_additional_prompt": {
+              "parameter_type": null
+            },
+            "inpaint_input_image": {
+              "parameter_type": null
+            },
+            "inpaint_input_mask": {
+              "parameter_type": null
+            },
+            "inpaint_strength": {
+              "parameter_type": null
+            },
+            "outpaint_selections": {
+              "parameter_type": null
+            },
+            "outpaint_distance_left": {
+              "parameter_type": null
+            },
+            "outpaint_distance_top": {
+              "parameter_type": null
+            },
+            "outpaint_distance_right": {
+              "parameter_type": null
+            },
+            "outpaint_distance_bottom": {
+              "parameter_type": null
+            },
+            "cn_img1": {
+              "parameter_type": null
+            },
+            "cn_stop1": {
+              "parameter_type": null
+            },
+            "cn_weight1": {
+              "parameter_type": null
+            },
+            "cn_type1": {
+              "parameter_type": null
+            },
+            "cn_img2": {
+              "parameter_type": null
+            },
+            "cn_stop2": {
+              "parameter_type": null
+            },
+            "cn_weight2": {
+              "parameter_type": null
+            },
+            "cn_type2": {
+              "parameter_type": null
+            },
+            "cn_img3": {
+              "parameter_type": null
+            },
+            "cn_stop3": {
+              "parameter_type": null
+            },
+            "cn_weight3": {
+              "parameter_type": null
+            },
+            "cn_type3": {
+              "parameter_type": null
+            },
+            "cn_img4": {
+              "parameter_type": null
+            },
+            "cn_stop4": {
+              "parameter_type": null
+            },
+            "cn_weight4": {
+              "parameter_type": null
+            },
+            "cn_type4": {
+              "parameter_type": null
+            },
+            "adm_scaler_positive": {
+              "parameter_type": null
+            },
+            "adm_scaler_negative": {
+              "parameter_type": null
+            },
+            "adm_scaler_end": {
+              "parameter_type": null
+            },
+            "adaptive_cfg": {
+              "parameter_type": null
+            },
+            "sampler_name": {
+              "parameter_type": null
+            },
+            "scheduler_name": {
+              "parameter_type": null
+            },
+            "overwrite_step": {
+              "parameter_type": null
+            },
+            "overwrite_switch": {
+              "parameter_type": null
+            },
+            "overwrite_width": {
+              "parameter_type": null
+            },
+            "overwrite_height": {
+              "parameter_type": null
+            },
+            "overwrite_vary_strength": {
+              "parameter_type": null
+            },
+            "overwrite_upscale_strength": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_vary_upscale": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_inpaint": {
+              "parameter_type": null
+            },
+            "debugging_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "skipping_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "canny_low_threshold": {
+              "parameter_type": null
+            },
+            "canny_high_threshold": {
+              "parameter_type": null
+            },
+            "controlnet_softness": {
+              "parameter_type": null
+            },
+            "debugging_inpaint_preprocessor": {
+              "parameter_type": null
+            },
+            "inpaint_disable_initial_latent": {
+              "parameter_type": null
+            },
+            "inpaint_engine": {
+              "parameter_type": null
+            },
+            "inpaint_respective_field": {
+              "parameter_type": null
+            },
+            "invert_mask_checkbox": {
+              "parameter_type": null
+            },
+            "inpaint_erode_or_dilate": {
+              "parameter_type": null
+            },
+            "is_priority_queue": {
+              "parameter_type": null
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 1558,
+          "y": 2160
+        }
+      },
+      "UYiG-vetkastar-fooocus": {
+        "id": "UYiG-vetkastar-fooocus",
+        "data": {
+          "name": "Fooocus",
+          "processor": "mlscade/fooocus",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "prompt": "",
+            "cn_type1": "ImagePrompt",
+            "cn_type2": "ImagePrompt",
+            "cn_type3": "ImagePrompt",
+            "cn_type4": "ImagePrompt",
+            "sharpness": 2,
+            "image_seed": -1,
+            "uov_method": "Vary (Subtle)",
+            "adaptive_cfg": 7,
+            "image_number": 1,
+            "sampler_name": "dpmpp_2m_sde_gpu",
+            "adm_scaler_end": 0.3,
+            "guidance_scale": 4,
+            "inpaint_engine": "v2.6",
+            "overwrite_step": -1,
+            "refiner_switch": 0.5,
+            "scheduler_name": "karras",
+            "negative_prompt": "",
+            "overwrite_width": -1,
+            "inpaint_strength": 0.5,
+            "overwrite_height": -1,
+            "overwrite_switch": -1,
+            "style_selections": "Fooocus V2,Fooocus Enhance,Fooocus Sharp",
+            "loras_custom_urls": "",
+            "uov_upscale_value": 0,
+            "use_default_loras": true,
+            "adm_scaler_negative": 0.8,
+            "adm_scaler_positive": 1.5,
+            "canny_low_threshold": 64,
+            "controlnet_softness": 0.25,
+            "outpaint_selections": "",
+            "canny_high_threshold": 128,
+            "invert_mask_checkbox": false,
+            "outpaint_distance_top": 0,
+            "performance_selection": "Speed",
+            "outpaint_distance_left": 0,
+            "aspect_ratios_selection": "1152*896",
+            "inpaint_erode_or_dilate": 0,
+            "outpaint_distance_right": 0,
+            "overwrite_vary_strength": -1,
+            "inpaint_respective_field": 1,
+            "outpaint_distance_bottom": 0,
+            "skipping_cn_preprocessor": false,
+            "debugging_cn_preprocessor": false,
+            "inpaint_additional_prompt": "",
+            "overwrite_upscale_strength": -1,
+            "debugging_inpaint_preprocessor": false,
+            "inpaint_disable_initial_latent": false,
+            "mixing_image_prompt_and_inpaint": false,
+            "mixing_image_prompt_and_vary_upscale": false,
+            "is_priority_queue": false,
+            "uov_input_image": null
+          },
+          "settings_params": {
+            "prompt": {
+              "parameter_type": null
+            },
+            "negative_prompt": {
+              "parameter_type": null
+            },
+            "style_selections": {
+              "parameter_type": null
+            },
+            "performance_selection": {
+              "parameter_type": null
+            },
+            "aspect_ratios_selection": {
+              "parameter_type": null
+            },
+            "image_number": {
+              "parameter_type": null
+            },
+            "image_seed": {
+              "parameter_type": null
+            },
+            "use_default_loras": {
+              "parameter_type": null
+            },
+            "loras_custom_urls": {
+              "parameter_type": null
+            },
+            "sharpness": {
+              "parameter_type": null
+            },
+            "guidance_scale": {
+              "parameter_type": null
+            },
+            "refiner_switch": {
+              "parameter_type": null
+            },
+            "uov_input_image": {
+              "parameter_type": null
+            },
+            "uov_method": {
+              "parameter_type": null
+            },
+            "uov_upscale_value": {
+              "parameter_type": null
+            },
+            "inpaint_additional_prompt": {
+              "parameter_type": null
+            },
+            "inpaint_input_image": {
+              "parameter_type": null
+            },
+            "inpaint_input_mask": {
+              "parameter_type": null
+            },
+            "inpaint_strength": {
+              "parameter_type": null
+            },
+            "outpaint_selections": {
+              "parameter_type": null
+            },
+            "outpaint_distance_left": {
+              "parameter_type": null
+            },
+            "outpaint_distance_top": {
+              "parameter_type": null
+            },
+            "outpaint_distance_right": {
+              "parameter_type": null
+            },
+            "outpaint_distance_bottom": {
+              "parameter_type": null
+            },
+            "cn_img1": {
+              "parameter_type": null
+            },
+            "cn_stop1": {
+              "parameter_type": null
+            },
+            "cn_weight1": {
+              "parameter_type": null
+            },
+            "cn_type1": {
+              "parameter_type": null
+            },
+            "cn_img2": {
+              "parameter_type": null
+            },
+            "cn_stop2": {
+              "parameter_type": null
+            },
+            "cn_weight2": {
+              "parameter_type": null
+            },
+            "cn_type2": {
+              "parameter_type": null
+            },
+            "cn_img3": {
+              "parameter_type": null
+            },
+            "cn_stop3": {
+              "parameter_type": null
+            },
+            "cn_weight3": {
+              "parameter_type": null
+            },
+            "cn_type3": {
+              "parameter_type": null
+            },
+            "cn_img4": {
+              "parameter_type": null
+            },
+            "cn_stop4": {
+              "parameter_type": null
+            },
+            "cn_weight4": {
+              "parameter_type": null
+            },
+            "cn_type4": {
+              "parameter_type": null
+            },
+            "adm_scaler_positive": {
+              "parameter_type": null
+            },
+            "adm_scaler_negative": {
+              "parameter_type": null
+            },
+            "adm_scaler_end": {
+              "parameter_type": null
+            },
+            "adaptive_cfg": {
+              "parameter_type": null
+            },
+            "sampler_name": {
+              "parameter_type": null
+            },
+            "scheduler_name": {
+              "parameter_type": null
+            },
+            "overwrite_step": {
+              "parameter_type": null
+            },
+            "overwrite_switch": {
+              "parameter_type": null
+            },
+            "overwrite_width": {
+              "parameter_type": null
+            },
+            "overwrite_height": {
+              "parameter_type": null
+            },
+            "overwrite_vary_strength": {
+              "parameter_type": null
+            },
+            "overwrite_upscale_strength": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_vary_upscale": {
+              "parameter_type": null
+            },
+            "mixing_image_prompt_and_inpaint": {
+              "parameter_type": null
+            },
+            "debugging_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "skipping_cn_preprocessor": {
+              "parameter_type": null
+            },
+            "canny_low_threshold": {
+              "parameter_type": null
+            },
+            "canny_high_threshold": {
+              "parameter_type": null
+            },
+            "controlnet_softness": {
+              "parameter_type": null
+            },
+            "debugging_inpaint_preprocessor": {
+              "parameter_type": null
+            },
+            "inpaint_disable_initial_latent": {
+              "parameter_type": null
+            },
+            "inpaint_engine": {
+              "parameter_type": null
+            },
+            "inpaint_respective_field": {
+              "parameter_type": null
+            },
+            "invert_mask_checkbox": {
+              "parameter_type": null
+            },
+            "inpaint_erode_or_dilate": {
+              "parameter_type": null
+            },
+            "is_priority_queue": {
+              "parameter_type": null
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 830,
+          "y": 3258
+        }
+      },
+      "wFps-if-condition-stop-execution": {
+        "id": "wFps-if-condition-stop-execution",
+        "data": {
+          "name": "Conditional Branching (IF) (Stop Execution)",
+          "processor": "if-condition-stop-execution",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "condition": "",
+            "input": "pass"
+          },
+          "settings_params": {
+            "condition": {
+              "parameter_type": null
+            },
+            "input": {
+              "parameter_type": "executed_code"
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 305,
+          "y": 2812
+        }
+      },
+      "XC4n-if-condition-stop-execution": {
+        "id": "XC4n-if-condition-stop-execution",
+        "data": {
+          "name": "Conditional Branching (IF) (Stop Execution)",
+          "processor": "if-condition-stop-execution",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "condition": "",
+            "input": "pass"
+          },
+          "settings_params": {
+            "condition": {
+              "parameter_type": null
+            },
+            "input": {
+              "parameter_type": "executed_code"
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 893,
+          "y": 2318
+        }
+      },
+      "CQFu-if-condition-stop-execution": {
+        "id": "CQFu-if-condition-stop-execution",
+        "data": {
+          "name": "Conditional Branching (IF) (Stop Execution)",
+          "processor": "if-condition-stop-execution",
+          "inner_version": null,
+          "is_batch": false,
+          "settings": {
+            "condition": "",
+            "input": "pass"
+          },
+          "settings_params": {
+            "condition": {
+              "parameter_type": null
+            },
+            "input": {
+              "parameter_type": "executed_code"
+            }
+          },
+          "defaults": null,
+          "fields": [],
+          "results": []
+        },
+        "position": {
+          "x": 908,
+          "y": 37
+        }
+      }
+    },
+    "related_workflows": []
+  },
+  "ui_config": {
+    "nodes": {
+      "start": {
+        "activeFields": {
+          "prompt_Image": true,
+          "CN_image_2": true,
+          "CN_image_1": true,
+          "CN_image_3": true,
+          "CN_image_4": true,
+          "cn1_w": true,
+          "cn2_w": true,
+          "cn3_w": true,
+          "cn4_w": true,
+          "Face_Swap": true,
+          "Upscale": true,
+          "Variance": true
+        },
+        "position": {
+          "x": 390.13635593907566,
+          "y": 85.42620703307625
+        }
+      },
+      "end": {
+        "position": {
+          "x": 2354.980331260682,
+          "y": 1815.448548926708
+        },
+        "activeFields": {
+          "Output": true
+        }
+      },
+      "tqAT-vetkastar-fooocus": {
+        "activeFields": {
+          "prompt": true,
+          "style_selections": true,
+          "inpaint_input_image": false,
+          "inpaint_input_mask": false,
+          "cn_img1": true,
+          "cn_type1": true,
+          "cn_stop1": false,
+          "cn_weight1": true,
+          "cn_img2": true,
+          "cn_stop2": false,
+          "cn_weight2": true,
+          "cn_type2": true,
+          "cn_img3": true,
+          "cn_stop3": false,
+          "cn_weight3": true,
+          "cn_type3": true,
+          "cn_img4": true,
+          "cn_stop4": false,
+          "cn_weight4": true,
+          "cn_type4": true
+        },
+        "position": {
+          "x": 1512.0342623829274,
+          "y": 209.80166295057495
+        }
+      },
+      "mbdQ-vetkastar-fooocus": {
+        "activeFields": {
+          "prompt": false,
+          "style_selections": true,
+          "uov_input_image": true,
+          "uov_method": true,
+          "uov_upscale_value": false,
+          "inpaint_input_image": false,
+          "is_priority_queue": false
+        },
+        "position": {
+          "x": 1558.8293703160732,
+          "y": 2160.2624114029263
+        }
+      },
+      "UYiG-vetkastar-fooocus": {
+        "activeFields": {
+          "prompt": false,
+          "style_selections": true,
+          "uov_input_image": true
+        },
+        "position": {
+          "x": 830.245219100669,
+          "y": 3258.029715677034
+        }
+      },
+      "wFps-if-condition-stop-execution": {
+        "activeFields": {
+          "condition": true,
+          "input": false
+        },
+        "position": {
+          "x": 305.98093413938767,
+          "y": 2812.8537857234037
+        }
+      },
+      "XC4n-if-condition-stop-execution": {
+        "activeFields": {
+          "condition": true,
+          "input": false
+        },
+        "position": {
+          "x": 893.1619544333246,
+          "y": 2318.698073138956
+        }
+      },
+      "CQFu-if-condition-stop-execution": {
+        "activeFields": {
+          "condition": true,
+          "input": false
+        },
+        "position": {
+          "x": 908.1566793677594,
+          "y": 37.209310449068624
+        }
+      }
+    },
+    "extraNodes": []
+  }
+}
